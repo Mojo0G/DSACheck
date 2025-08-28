@@ -1,8 +1,8 @@
 
           Two Sum
 
-          - Summary: This algorithm uses a hashmap (dictionary in Python) to efficiently find two numbers in a list that add up to a target value.  It iterates through the input list, checking for each number if its complement (target - number) exists in the hashmap. If found, it returns the indices of the two numbers; otherwise, it adds the current number and its index to the hashmap and continues. If no solution is found after iterating through the entire list, it returns an empty list.
+          - Summary: This function uses an unordered_map (hash table) to efficiently find pairs of numbers that sum to a target value.  It first populates the hash table with each number in the input array and its index. Then, it iterates through the array again, checking if the complement (target - current number) exists in the hash table. If found and the complement's index is different from the current number's index, it returns the indices of the pair. Otherwise, it returns an empty vector indicating no such pair exists.
 
-          - Time Complexity: O(n) because the algorithm iterates through the input list once. Hashmap lookups are on average O(1).
-          - Space Complexity: O(n) because in the worst-case scenario, the hashmap will store all the numbers from the input list.
+          - Time Complexity: O(n) because the algorithm involves two iterations through the input array, each taking linear time.  The hash table lookups have an average time complexity of O(1).
+          - Space Complexity: O(n) because the space used by the unordered_map (hash table) is proportional to the number of elements in the input array in the worst case.
           
